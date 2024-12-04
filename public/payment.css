@@ -1,0 +1,89 @@
+/* General Body Styles */
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(120deg, #fdfbfb, #ebedee);
+  color: #333;
+}
+
+/* Container Styles */
+.container {
+  max-width: 600px;
+  margin: 50px auto;
+  background: #ffffff;
+  padding: 25px 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Header Styles */
+h1 {
+  font-size: 26px;
+  color: #ff5722;
+  margin-bottom: 20px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* Instructions Section */
+.instructions {
+  margin: 20px 0;
+  font-size: 18px;
+  line-height: 1.8;
+  color: #555;
+}
+
+.instructions strong {
+  color: #ff5722;
+  font-weight: 600;
+}
+
+/* QR Code Section */
+.qr-section {
+  margin: 20px auto;
+}
+
+.qr-code {
+  max-width: 220px;
+  width: 100%;
+  border: 5px solid #ff5722;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+      width: 90%;
+      padding: 15px;
+  }
+
+  h1 {
+      font-size: 22px;
+  }
+
+  .instructions {
+      font-size: 16px;
+  }
+
+  .qr-code {
+      max-width: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+      font-size: 20px;
+  }
+
+  .instructions {
+      font-size: 15px;
+  }
+
+  .qr-code {
+      max-width: 150px;
+  }
+}

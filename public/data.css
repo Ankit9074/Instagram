@@ -1,0 +1,232 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: 'Arial', sans-serif;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding-top: 10px;
+}
+
+/* Profile Section */
+#profile-result {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 20px auto;
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  max-width: 600px;
+  width: 100%;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#profile-name {
+  margin-left: 20px;
+}
+
+#profile-image {
+  border-radius: 50%;
+  border: 3px solid #4caf50;
+  max-width: 100px;
+  margin-bottom: 10px;
+  height: 100px;
+}
+
+#profile-name {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+}
+
+/* General styling */
+.container {
+  width: 100%;
+  margin: 5px auto;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+h2 {
+  margin-bottom: 5px;
+  color: #4caf50;
+}
+
+/* Plan card styling */
+.plan-card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 10px auto;
+  padding: 20px;
+  width: 600px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+.plan-card .followers {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #ff5722;
+  margin-bottom: 10px;
+}
+
+.plan-card .price {
+  font-size: 1.2em;
+  color: #4caf50;
+  margin-bottom: 10px;
+}
+
+.plan-card .details {
+  font-size: 1em;
+  color: #666;
+  margin: 5px 0;
+}
+
+.plan-card .btn {
+  display: inline-block;
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.plan-card .btn:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Styles */
+
+/* For small devices like phones in portrait orientation */
+@media screen and (max-width: 600px) {
+  #profile-result {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  #profile-name {
+    font-size: 1.2em;
+  }
+
+  #profile-image {
+    max-width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+  }
+
+  .container {
+    padding: 10px;
+  }
+
+  h2 {
+    font-size: 1.4em;
+    margin-bottom: 15px;
+  }
+
+  /* Plan card adjustments */
+  .plan-card {
+    width: 100%;
+    padding: 15px;
+    margin: 10px;
+  }
+
+  .plan-card .followers {
+    font-size: 1.3em;
+  }
+
+  .plan-card .price {
+    font-size: 1.1em;
+  }
+
+  .plan-card .btn {
+    font-size: 1em;
+    padding: 8px 16px;
+  }
+}
+
+/* For medium-sized devices like tablets */
+@media screen and (max-width: 768px) {
+  #profile-result {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  #profile-name {
+    font-size: 1.3em;
+  }
+
+  #profile-image {
+    max-width: 120px;
+    height: 120px;
+  }
+
+  .container {
+    padding: 15px;
+  }
+
+  h2 {
+    font-size: 1.6em;
+  }
+
+  /* Plan card adjustments */
+  .plan-card {
+    width: 90%;
+    padding: 18px;
+  }
+
+  .plan-card .followers {
+    font-size: 1.4em;
+  }
+
+  .plan-card .price {
+    font-size: 1.2em;
+  }
+
+  .plan-card .btn {
+    font-size: 1.1em;
+    padding: 10px 18px;
+  }
+}
+
+/* For large devices like desktops */
+@media screen and (min-width: 1024px) {
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .plan-card {
+    width: 600px;
+  }
+
+  .plan-card .btn {
+    font-size: 1.2em;
+    padding: 12px 20px;
+  }
+}

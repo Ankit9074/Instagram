@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile Details</title>
+  <link rel="stylesheet" href="data.css">
+</head>
+<body>
+  <div id="profile-result">
+    <img id="profile-image" style="max-width: 300px; margin-top: 10px;">
+    <p id="profile-name" style="font-size: 1.2em; margin-top: 10px;"></p>
+  </div>
+
+  <div class="container">
+    <h2>Instagram Followers Plans</h2>
+    
+    <!-- Plan 1: 1k Followers -->
+    <div class="plan-card">
+      <p class="followers">Followers: 1k <span>🔥</span></p>
+      <p class="price">Price: ₹90</p>
+      <p class="details">Old & Real: 1-3 years old</p>
+      <p class="details">Time: UltraFast</p>
+      <p class="details">Drop Rate: 0% No Drop</p>
+      <button class="btn" onclick="openPaymentPage(1000, 90)">Get Followers Now</button>
+    </div>
+    
+    <!-- Plan 2: 5k Followers -->
+    <div class="plan-card">
+      <p class="followers">Followers: 5k <span>🔥</span></p>
+      <p class="price">Price: ₹150</p>
+      <p class="details">Old & Real: 1-3 years old</p>
+      <p class="details">Time: UltraFast</p>
+      <p class="details">Drop Rate: 0% No Drop</p>
+      <button class="btn" onclick="openPaymentPage(5000, 150)">Get Followers Now</button>
+    </div>
+  </div>
+
+  <script>
+    // Get query parameters from the URL
+    const params = new URLSearchParams(window.location.search);
+    const profileImage = params.get('profileImage');
+    const fullName = params.get('fullName');
+
+    // Set data in the HTML
+    if (profileImage && fullName) {
+      document.getElementById('profile-image').src = profileImage;
+      document.getElementById('profile-name').textContent = `User_Name: ${fullName}`;
+    }
+
+    // Function to open the payment page with selected follower plan
+    function openPaymentPage(followers, price) {
+      // Pass selected follower count and price as query parameters
+      const url = `payment.html?followers=${followers}&price=${price}`;
+      window.location.href = url;
+    }
+  </script>
+</body>
+</html>

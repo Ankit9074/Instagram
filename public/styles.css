@@ -1,0 +1,285 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: 'Arial', sans-serif;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* Horizontally center content */
+  align-items: center;
+  /* Vertically center content */
+  min-height: 100vh;
+  /* Full viewport height */
+  padding-top: 20px;
+  text-align: center;
+}
+
+/* Form Container */
+#username-form {
+  background: rgba(255, 255, 255, 0.8);
+  /* Light background for form */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Add a subtle shadow */
+  max-width: 80%;
+  /* Limit the width on larger screens */
+  width: 100%;
+  /* Full width on small screens */
+  text-align: center;
+}
+
+/* Form Heading */
+#username-form h4 {
+  color: #bc1888;
+  font-size: 1rem;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+/* Input Styling */
+#username-form input[type="text"] {
+  width: 80%;
+  padding: 8px;
+  font-size: .8rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background: #fff;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+/* Input Focus Effect */
+#username-form input[type="text"]:focus {
+  border-color: #bc1888;
+  /* Border color when input is focused */
+}
+
+/* Submit Button Styling */
+#username-form button {
+  padding: 8px 15px;
+  background-color: #bc1888;
+  /* Instagram-like pink */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: .9rem;
+  cursor: pointer;
+  margin-top: 10px;
+  width: 80%;
+  /* Same width as the input field */
+  transition: background-color 0.3s ease;
+}
+
+/* Button Hover Effect */
+#username-form button:hover {
+  background-color: #a11f74;
+  /* Darker pink on hover */
+}
+
+/* Result Section */
+
+
+/* Image Container */
+.image-container {
+  display: flex;
+  flex-wrap: wrap;
+  /* Wrap images on smaller screens */
+  justify-content: center;
+  /* Center images horizontally */
+  gap: 20px;
+  /* Add space between images */
+  padding: 20px;
+}
+
+/* Image Styling */
+.image-container img {
+  max-width: 40%;
+  /* Make images responsive */
+  height: auto;
+  /* Maintain aspect ratio */
+  border-radius: 10px;
+  /* Optional: Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  /* Optional: Shadow for aesthetics */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* Smooth hover effects */
+}
+
+/* Hover Effect */
+.image-container img:hover {
+  transform: scale(1.05);
+  /* Slight zoom-in on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 1100px) {
+
+  /* Form width adjustment */
+  #username-form {
+    width: 90%;
+    /* Make form take more width on smaller screens */
+  }
+
+  /* Input and Button Full Width */
+  #username-form input[type="text"],
+  #username-form button {
+    width: 100%;
+    /* Full width for input and button on smaller screens */
+  }
+
+  /* Image container adjustments */
+  .image-container {
+    flex-direction: column;
+    /* Stack images vertically on small screens */
+  }
+
+  .image-container img {
+    max-width: 100%;
+    /* Make images take up most of the screen */
+  }
+}
+
+
+/* Initially hide the result section */
+/* General styling for the result section */
+#result {
+  background-color: rgba(255, 255, 255, 0.9); /* Light background */
+  padding: 10px;
+  border-radius: 15px;
+  display: flex; /* Use flexbox for layout */
+  flex-direction: row; /* Arrange items in a column */
+  align-items: center; /* Center items horizontally */ /* Center items vertically */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+  max-width: 100%;
+  width: 80%;
+  height: auto; /* Optional: Set height dynamically based on content */
+  margin: 0 auto; /* Center horizontally within the parent container */
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out; /* Smooth fade-in effect */
+  margin-top: 10px;
+  justify-content: center;
+}
+
+
+
+/* Style when the result section is active (visible) */
+#result.active {
+  opacity: 1;
+  /* Make the result section visible */
+}
+
+
+
+
+
+
+
+#footer {
+  margin-top: 20px; /* Add space above the footer */
+  width: 100%; /* Center the footer content */
+}
+
+#footer img {
+  max-width: 100%; /* Make the image responsive */
+ /* Maintain aspect ratio */
+  border-radius: 10px; /* Optional: Add rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Optional: Add a shadow for depth */
+}
+
+/* 
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+#loader {
+  display: none;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.spinner {
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+} */
+
+/* Loader container */
+#loader {
+  display: none;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Spinner animation */
+.spinner {
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-top: 4px solid #3498db; /* Blue color for the spinner */
+  border-radius: 50%;
+  width: 40px; /* Size of the spinner */
+  height: 40px; /* Size of the spinner */
+  animation: spin 1s linear infinite; /* Continuous spinning animation */
+}
+
+/* Animation for spinning */
+@keyframes spin {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
+/* Text under the spinner */
+#loader p {
+  color: #3498db; /* Blue color for the text */
+  font-size: 1.2em;
+  margin-top: 10px;
+}
+
+/* Optional: Styling for the result section when it's hidden initially */
+#result {
+  display: none;
+}
+
+/* Make the footer image responsive */
+/* Default styling for the footer image */
+#footer img {
+  width: 100%;
+  max-height: 600px;
+  margin-top: 20px;
+  object-fit: contain; /* Ensures the image scales without distortion */
+}
+
+/* Media query for smaller screens (e.g., 360px) */
+@media (max-width: 360px) {
+  #footer img {
+    max-width: 100%;  /* Ensures the image fits within the screen */
+    margin-top: 10px; /* Adjusts the margin for smaller screens */
+  }
+}
+
+/* Media query for larger screens (optional, you can customize further) */
+@media (min-width: 361px) and (max-width: 767px) {
+  #footer img {
+    max-width: 100%;  /* Ensures the image doesn't exceed the width of its container */
+    margin-top: 20px; /* Keeps the margin for medium-sized screens */
+  }
+}

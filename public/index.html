@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instagram Profile Scraper</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <form id="username-form">
+    <h4>Your Instagram Profile URL or Username:</h4>
+    <input type="text" id="username" placeholder="Enter Username">
+    <button type="submit">Get Follower</button>
+  </form>
+
+  <!-- Loader -->
+  <div id="loader">
+    <div class="spinner"></div>
+    <p>Loading...</p>
+  </div>
+
+  <div id="result" style="display: none;">
+    <p id="error-message" style="color: red;"></p>
+    <img id="profile-image" style="display: none; max-width: 300px; margin-top: 10px;">
+    <p id="profile-name" style="font-size: 1.2em; margin-top: 10px;"></p>
+    <p id="follower-count" style="font-size: 1.2em; margin-top: 10px;"></p>
+  </div>
+
+  <div class="image-container">
+    <img src="./image/proof.jpg" alt="">
+    <img src="./image/proof2.jpg" alt="">
+  </div>  
+
+  <footer id="footer">
+    <img src="https://growwave.online/instagram/images/google_pay_footer.webp" alt="Footer Image">
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

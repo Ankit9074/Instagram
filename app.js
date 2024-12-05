@@ -27,7 +27,6 @@ app.get('/scrape', async (req, res) => {
 //  Scrape Code to Another Folder Remove
 async function getProfileData(username) {
   const url = `https://www.instagram.com/${username}/`;
-
   try {
     const { data } = await axios.get(url, {
       headers: {

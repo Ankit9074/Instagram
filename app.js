@@ -2,6 +2,7 @@ const express = require('express');
 const compression = require('compression');
 const axios = require('axios');
 const cheerio = require('cheerio');
+const cors = require('cors')
 
 const app = express();
 
